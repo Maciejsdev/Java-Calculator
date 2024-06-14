@@ -7,10 +7,15 @@ public class Main {
 
         while(flag){
             System.out.print("Input first number: ");
+            while (!scanner.hasNextDouble()) {
+                System.out.println("Err! that's not a number! Input first number: ");
+                scanner.next();
+            }
             double num1 = scanner.nextDouble();
             boolean validOperator;
             char operator;
             double result=0;
+
 
         do {
             System.out.print("Input operator (+, -, *, /): ");
@@ -23,6 +28,10 @@ public class Main {
 
 
             System.out.print("Input second number: ");
+            while (!scanner.hasNextDouble()) {
+                System.out.println("Err! that's not a number! Input second number:");
+                scanner.next();
+            }
             double num2 = scanner.nextDouble();
 
 
@@ -59,10 +68,6 @@ public class Main {
             if (input.isEmpty()) {
                 flag = false;
             }
-
-        }
-
-
-
         }
     }
+}
